@@ -26,5 +26,5 @@ en los nuevos ordenadores con placas bases modernas utilizan UEFI que es casi ex
 - Orden de arranque.
 - Secure Boot.  
 
-##seccion 2
+## seccion 2
 Duration: 0:10:00
