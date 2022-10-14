@@ -39,16 +39,16 @@ Una vez dentro de mi UEFI en mi caso metere en el apartado de **Seguridad** que 
 ##
 Como podemos ver en la imagen de abajo yo ya tengo activado la contraseña del modo administrador, es recomendable poner una contraseña de minimo 8 caracteres para que sea muchisimo mas seguro.
 ##
-![imagen](identificador-unico-del-codelab/img/administrador.jpeg)
+![imagen](img/administrador.jpeg)
 ##
 ##
 Ahora en la siguiente podemos ver que cuando reiniciamos y entramos en la UEFI/BIOS nos aparece una ventana para que introduzcamos la contraseña.
 ##
-![imagen](identificador-unico-del-codelab/img/contra1.jpeg)
+![imagen](img/contra1.jpeg)
 ##
 listo y una vez dentro ya nos aparecera que tenemos el acceso como *administrador* y como he dicho anteriormente el administrador puede hacer cualquier cambio de configuracion de a bios
 ##
-![imagen](identificador-unico-del-codelab/img/acceso.jpeg)
+![imagen](img/acceso.jpeg)
 ##
 ##
 ##
@@ -58,7 +58,7 @@ listo y una vez dentro ya nos aparecera que tenemos el acceso como *administrado
 Ahora vamos a activar la contraseña del Usuario o contraseña de **arranque del dispositivo**, las pongo juntas porque en mi caso activando la de usuario tambien se activa la de arranque del dispositivo a que me quiero referir con esto. Cuando yo apague el reinicie el ordenador me va a aparecer la misma ventana para introducir la contraseña que nos permitira en este caso seguir con el arranque del equipo y poder acceder al windows.
 ##
 ##
-![imagen](identificador-unico-del-codelab/img/usuario.jpeg)
+![imagen](img/usuario.jpeg)
 ##
 ##
 Aqui tenemos la activacion de la contraseña del usuario y como bien indica mi UEFI/BiOS arriba en la descripcion 
@@ -72,7 +72,7 @@ En mi caso si tengo activadas las dos contraseñas, el administrador es el unico
 Antiguamente la contraseña de **arranque del dispostivos** estaba denominada como HDD password y en las placas antiguas se activaba de esta forma.
 ##
 ##
-![imagen](identificador-unico-del-codelab/img/hdd.png)
+![imagen](img/hdd.png)
 
 ## Arranque externos y Orden de arranque
 Duration: 0:30:00
@@ -83,13 +83,13 @@ Cuando decimos arranques externos nos queremos referir a cuando arrancamos un si
 hoy en dia algunas **UEFI/BIOS** vienen sin poder Desabilitar el arranque por *USB*, por ejemplo en mi caso 
 ##
 ##
-![imagen](identificador-unico-del-codelab/img/boot.jpeg)
+![imagen](img/boot.jpeg)
 ##
 ##
 E utilizado una **BIOS** virtual para mostrarles que en algunas BIOS un poco mas antiguas todavia sigue apareciendo el *USB BOOT* esto es lo que nos permite si queremos arrancar atraves de por medio de USB, si nostros conectaramos un USB con una ISO De windows o Ubuntu arrancaria el metodo de instalacion o podria intentar restaurar el sistema etc.
 ##
 ##
-![imagen](identificador-unico-del-codelab/img/leonovo.png) 
+![imagen](img/leonovo.png) 
 ##
 ##
 Por lo menos en mi caso la unica solucion que yo veo posible ya que no tengo la opcion **USB boot** podria habilitar el *Secure boot* para windows pero esto mejor ya lo explico en la proxima seccion o sino tambien podria desactivar los puertos USB tambien es una forma segura que lo que hace esque los puertos USB del panel frontal queden desactivados completamente *(Tambien se pueden llegar a desactivar los de la placa)*.
@@ -101,7 +101,7 @@ Por lo menos en mi caso la unica solucion que yo veo posible ya que no tengo la 
 El orden de arranque es muy importante tambien a la hora de hacer una configuracion segura a la BIOS/UEFI, imaginemos el caso que tenemos conectados al ordenador 4 discos duros,1 disquetera y 1 lectora de cd. si no tenemos bien configurado la orden de arranque se pondra a buscar en todo los dispositivos conectados al ordenador, la forma mas optima y mas segura es desactivar los dispositivos que no vamos a necesitar para que arranque.
 ##
 ##
-![imagen](identificador-unico-del-codelab/img/orden.jpeg) 
+![imagen](img/orden.jpeg) 
 ##
 ##
 En mi caso tengo 3 dispositivos, 1 M.2 y 2 SSD uno con un server PROXMOX instalado y otro para datos, y tengo como primer orden de arranque el windows que es mi sistema y los demas los tengo desactivado. porque tambien es seguro y es mucho mas rapido 
@@ -115,7 +115,7 @@ Duration: 0:30:00
 El secure boot fue introducido por *Microsoft*, lo que hace es que no permite que se ejecuten software no firmado (linux, ubuntu o cualquiere otra distribucion, **"alguna distribucion de linux si se adaptaron"** ) o tambien todo lo que no sea windows
 ##
 ## 
-![imagen](identificador-unico-del-codelab/img/secure.jpeg) 
+![imagen](img/secure.jpeg) 
 ##
 esto nos ayuda para que nos no intenten ejecutar algun software malicioso.
 ##
@@ -125,7 +125,7 @@ esto nos ayuda para que nos no intenten ejecutar algun software malicioso.
 El wake on lan es una opcion de la bios que nos permite encender el ordenador por red sin tener que darle al boton de encendido, ciertos programas te permite hacerlo atraves del movil o tambien desde apartos de domoticas como por ejemplo alexa. de por si no esta activado pero es recomendable tenerlo desactivado porque en enciertos casos se han detectado ataques ransomware que llegaban a apagar el ordenador
 ##
 **para desactivarlo** 
-![imagen](identificador-unico-del-codelab/img/wake.jpeg) 
+![imagen](img/wake.jpeg) 
 ##
 En algunas BIOS/UEFI se llama **wake-on-lan** y en otras es en *power on by PCI-E* pero es la misma funcion
 ##
@@ -135,4 +135,4 @@ En algunas BIOS/UEFI se llama **wake-on-lan** y en otras es en *power on by PCI-
 sirve para proteger claves de cifrado por hardware y software. El tipo de claves que maneja y protege TPM, tanto la versión base como la 2.0, son claves de cifrado que almacenan credenciales nuestras, por lo que contienen información bastante
 ##
 ##
-![imagen](identificador-unico-del-codelab/img/TPM.jpeg) 
+![imagen](img/TPM.jpeg) 
