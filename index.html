@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Criterio 6a</title>
+  <title></title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,28 +23,80 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid="ID de Google Analytics"
                   id="identificador-unico-del-codelab"
-                  title="Criterio 6a"
+                  title=""
                   environment="web"
                   feedback-link="Un enlace en el que los usuarios puedan darte feedback (quizás creando un issue en un repositorio de git)">
     
-      <google-codelab-step label="configurado la BIOS para incrementar la seguridad del dispositivo" duration="10">
-        <h2 is-upgraded>Breve descripcion De BIOS/UEFI </h2>
-<p> Bios  es el primer programa informático que se ejecuta al encender el ordenador se encarga de inicializar y probar todo el hardware del sistema informático, acutalmente en los nuevos ordenadores con placas bases modernas utilizan UEFI que es casi excatamente igual que la UEFI solo que nos permite configurar mas funciones.</p>   
-<strong>Formas  de proteger tu BIOS</strong>
+      <google-codelab-step label="configurado la BIOS para incrementar la seguridad del dispositivo" duration="15">
+        <h2 is-upgraded>1.1 Breve descripcion De BIOS/UEFI </h2>
+<p> Bios  es el primer programa informático que se ejecuta al encender el ordenador se encarga de inicializar y probar todo el hardware del sistema informático, acutalmente en los nuevos ordenadores con placas bases modernas utilizan UEFI que es casi excatamente igual que la UEFI solo que nos permite configurar mas funciones. </p>
+<p><strong>Formas  de proteger tu BIOS    </strong></p>
 <ul>
-<li>Contraseña de administración de la BIOS. </li>
-<li>Contraseña de usuario de la BIOS. </li>
-<li>Contraseña de arranque del dispositivo. </li>
+<li>Contraseña de administrador de la BIOS. </li>
+<li>Contraseña de usuario de la BIOS o Contraseña de arranque del dispositivo. </li>
 <li>Permiso para el arranque desde dispositivos USB. </li>
 <li>Orden de arranque. </li>
-<li>Secure Boot.    </li>
+<li>Secure Boot. </li>
 </ul>
-<p>NO ENTIENDO</p>
- </google-codelab-step>
-<google-codelab-step label="seccion 2" duration="10">
-<p> esto es una mierda </p> 
-</google-codelab-step>
-</google-codelab>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Contraseña de Administrador y de usuario" duration="20">
+        <h2 is-upgraded>2.1 Contraseña de Administrador </h2>
+<p> La contraseña de administrador nos proporciona la seguridad y proteccion a la bios, nostros tendremos acceso a cualquir parametro de configuracion de la bios y podremos modificarlo si queremos o no, si esta activada la contraseña de administrador el usuario podra solo ver simplemente la configuracion pero nunca podra modificar ningun paramentro.(<em>Todo esto tambien depende la bios que sea</em>) </p>
+<p>Para poder acceder a la UEFI/BIOS dependiendo del la placa base y del fabricante utilizaremos <strong>F2</strong> o <strong>SUPR</strong> sino alguna otra tecla, en mi caso es pulsando esas teclas. </p>
+<p>Una vez dentro de mi UEFI en mi caso metere en el apartado de <strong>Seguridad</strong> que es donde se encuentra para poder configurar la contraseña de <strong>administrador</strong> y de <strong>usuario</strong></p>
+<p>Como podemos ver en la imagen de abajo yo ya tengo activado la contraseña del modo administrador, es recomendable poner una contraseña de minimo 8 caracteres para que sea muchisimo mas seguro. </p>
+<p class="image-container"><img alt="imagen" src="img\\4707bcdbe05f5f60.jpeg"></p>
+<p>Ahora en la siguiente podemos ver que cuando reiniciamos y entramos en la UEFI/BIOS nos aparece una ventana para que introduzcamos la contraseña. </p>
+<p class="image-container"><img alt="imagen" src="img\\6f7d4dc461b4e4e8.jpeg"></p>
+<p>listo y una vez dentro ya nos aparecera que tenemos el acceso como <em>administrador</em> y como he dicho anteriormente el administrador puede hacer cualquier cambio de configuracion de a bios </p>
+<p class="image-container"><img alt="imagen" src="img\\ae7819cd8a77bf87.jpeg"></p>
+<h2 is-upgraded>2.2 Contraseña de Usuario/Arranque </h2>
+<p> Ahora vamos a activar la contraseña del Usuario o contraseña de <strong>arranque del dispositivo</strong>, las pongo juntas porque en mi caso activando la de usuario tambien se activa la de arranque del dispositivo a que me quiero referir con esto. Cuando yo apague el reinicie el ordenador me va a aparecer la misma ventana para introducir la contraseña que nos permitira en este caso seguir con el arranque del equipo y poder acceder al windows. </p>
+<p class="image-container"><img alt="imagen" src="img\\e49a95616a890e66.jpeg"></p>
+<p>Aqui tenemos la activacion de la contraseña del usuario y como bien indica mi UEFI/BiOS arriba en la descripcion  &#34;<em>Si solamente se estable la contraseña del usuario entonces es una contraseña de encendido y se debe especificar para arrancar o entrar en la configuracion, en la configuracion el usuario tendra derechos de administrativos</em>&#34; lo que quiere decir con esto esque el si en mi <strong>UEFI</strong> solo tengo activado la contraseña de usuario me pedira una contraseña de arranque y tambien tendra los privilegios de administrador en la configuracion de la bios, por eso seria importante tener activado la de <strong>administrador</strong> y la de <strong>usuario</strong></p>
+<p>En mi caso si tengo activadas las dos contraseñas, el administrador es el unico que puede accceder a la configuracion de la BIOS/UEFI mientras tanto el usuario solo podro accedere al windows con la contraseña de arranque. </p>
+<h2 is-upgraded>2.3 Contraseña de HDD </h2>
+<p>Antiguamente la contraseña de <strong>arranque del dispostivos</strong> estaba denominada como HDD password y en las placas antiguas se activaba de esta forma. </p>
+<p class="image-container"><img alt="imagen" src="img\\2cf21bfb69cc57ac.png">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Arranque externos y Orden de arranque" duration="30">
+        <h2 is-upgraded>3.1 Arranques externos  </h2>
+<p> Cuando decimos arranques externos nos queremos referir a cuando arrancamos un sistema o un instalador atraves de algun dispositivos USB o tipo CD. Si no somos precavidos en ciertos aspectos cualquier persona que tenga acceso a nuestro ordenador gracias a un sistema live en un disco o en un USB podria intentar restablecer nuestra contraseña o cosas aun peores, hoy en dia algunas <strong>UEFI/BIOS</strong> vienen sin poder Desabilitar el arranque por <em>USB</em>, por ejemplo en mi caso  </p>
+<p class="image-container"><img alt="imagen" src="img\\8677a50f658a99dd.jpeg"></p>
+<p>E utilizado una <strong>BIOS</strong> virtual para mostrarles que en algunas BIOS un poco mas antiguas todavia sigue apareciendo el <em>USB BOOT</em> esto es lo que nos permite si queremos arrancar atraves de por medio de USB, si nostros conectaramos un USB con una ISO De windows o Ubuntu arrancaria el metodo de instalacion o podria intentar restaurar el sistema etc. </p>
+<p class="image-container"><img alt="imagen" src="img\\4eb66216c14e9ec.png">  </p>
+<p>Por lo menos en mi caso la unica solucion que yo veo posible ya que no tengo la opcion <strong>USB boot</strong> podria habilitar el <em>Secure boot</em> para windows pero esto mejor ya lo explico en la proxima seccion o sino tambien podria desactivar los puertos USB tambien es una forma segura que lo que hace esque los puertos USB del panel frontal queden desactivados completamente <em>(Tambien se pueden llegar a desactivar los de la placa)</em>. </p>
+<h2 is-upgraded>3.2 Orden de arranque </h2>
+<p>El orden de arranque es muy importante tambien a la hora de hacer una configuracion segura a la BIOS/UEFI, imaginemos el caso que tenemos conectados al ordenador 4 discos duros,1 disquetera y 1 lectora de cd. si no tenemos bien configurado la orden de arranque se pondra a buscar en todo los dispositivos conectados al ordenador, la forma mas optima y mas segura es desactivar los dispositivos que no vamos a necesitar para que arranque. </p>
+<p class="image-container"><img alt="imagen" src="img\\818fee184c5fda6c.jpeg">  </p>
+<p>En mi caso tengo 3 dispositivos, 1 M.2 y 2 SSD uno con un server PROXMOX instalado y otro para datos, y tengo como primer orden de arranque el windows que es mi sistema y los demas los tengo desactivado. porque tambien es seguro y es mucho mas rapido  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Otras opciones de seguridad" duration="30">
+        <h2 is-upgraded>Secure boot </h2>
+<p> El secure boot fue introducido por <em>Microsoft</em>, lo que hace es que no permite que se ejecuten software no firmado (linux, ubuntu o cualquiere otra distribucion, <strong>&#34;alguna distribucion de linux si se adaptaron&#34;</strong> ) o tambien todo lo que no sea windows </p>
+<p class="image-container"><img alt="imagen" src="img\\effeffbd159894ba.jpeg">  </p>
+<p>esto nos ayuda para que nos no intenten ejecutar algun software malicioso. </p>
+<h2 is-upgraded>Wake on lan </h2>
+<p> El wake on lan es una opcion de la bios que nos permite encender el ordenador por red sin tener que darle al boton de encendido, ciertos programas te permite hacerlo atraves del movil o tambien desde apartos de domoticas como por ejemplo alexa. de por si no esta activado pero es recomendable tenerlo desactivado porque en enciertos casos se han detectado ataques ransomware que llegaban a apagar el ordenador </p>
+<p><strong>para desactivarlo  </strong><img alt="imagen" src="img\\592a5ffb6b1a9924.jpeg">  </p>
+<p>En algunas BIOS/UEFI se llama <strong>wake-on-lan</strong> y en otras es en <em>power on by PCI-E</em> pero es la misma funcion </p>
+<h2 is-upgraded>TPM o Trusted platform module </h2>
+<p> sirve para proteger claves de cifrado por hardware y software. El tipo de claves que maneja y protege TPM, tanto la versión base como la 2.0, son claves de cifrado que almacenan credenciales nuestras, por lo que contienen información bastante </p>
+<p class="image-container"><img alt="imagen" src="img\\923f4b7a620e00d3.jpeg"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
